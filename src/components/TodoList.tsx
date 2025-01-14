@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
     return (
@@ -10,6 +11,7 @@ const TodoList = () => {
                 <span className="todo-list__header-item todo-list__header-item--edit">Edit</span>
                 <span className="todo-list__header-item todo-list__header-item--remove">Remove</span>
             </div>
+            <TodoItem />
         </div>
     );
 };
