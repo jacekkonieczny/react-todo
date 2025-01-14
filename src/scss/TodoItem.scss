@@ -1,0 +1,69 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--number {
+      flex: 0 1 5%;
+    }
+
+    &--description {
+      display: none;
+    }
+
+    &--title {
+      flex: 0 1 50%;
+    }
+
+    &--status {
+      flex: 0 1 30%;
+
+      .todo-item__button {
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: $primary-bg-color;
+
+        &--status {
+          color: $yellow-color;
+          border: 0.15rem solid $yellow-color;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    &--edit,
+    &--remove {
+      flex: 0 1 7.5%;
+
+      .todo-item__button {
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: $primary-bg-color;
+
+        &--status {
+          color: $yellow-color;
+          border: 0.15rem solid $yellow-color;
+          border-radius: 4px;
+        }
+
+        &--edit {
+          color: $blue-color;
+          border: 0.15rem solid $blue-color;
+          border-radius: 4px;
+        }
+
+        &--remove {
+          color: $red-color;
+          border: 0.15rem solid $red-color;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
