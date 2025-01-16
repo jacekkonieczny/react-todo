@@ -1,8 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPenToSquare, faTrash} from "@fortawesome/free-solid-svg-icons";
 
 const TodoItem = () => {
+    const [status, setStatus] = useState<string>("To Do");
+
+    const handleStatusChange = () => {
+        let nextStatus: string = "To Do";
+
+        if (status === "To Do") {
+            nextStatus = "In Progress";
+        } else if (status === "In Progress") {
+            nextStatus = "Completed";
+        } else if (status === "Completed") {
+            nextStatus = "To Do";
+        }
+
+        setStatus(nextStatus);
+    }
+
     return (
         <div className="todo-item">
             <span className="todo-item__field todo-item__field--number">1</span>
@@ -11,7 +27,7 @@ const TodoItem = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, provident.
     </span>
             <div className="todo-item__field todo-item__field--status">
-                <div className="todo-item__button todo-item__button--status">In Progress</div>
+                <div className={`todo-item__button todo-item__button--status ${status.toLowerCase().replace(" ", "-")}`} onClick={handleStatusChange}>{status}</div>
             </div>
             <div className="todo-item__field todo-item__field--edit">
                 <div className="todo-item__button todo-item__button--edit"><FontAwesomeIcon icon={faPenToSquare} size="lg"/></div>
