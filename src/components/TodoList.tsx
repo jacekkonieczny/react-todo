@@ -1,7 +1,18 @@
 import React from 'react';
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
+interface Todo {
+    id: string;
+    title: string;
+    description: string;
+    status: string;
+}
+
+interface TodoListProps {
+    todos: Todo[];
+}
+
+const TodoList = ({todos}: TodoListProps) => {
     return (
         <div className="todo-list">
             <div className="todo-list__header">
@@ -11,7 +22,9 @@ const TodoList = () => {
                 <span className="todo-list__header-item todo-list__header-item--edit">Edit</span>
                 <span className="todo-list__header-item todo-list__header-item--remove">Remove</span>
             </div>
-            <TodoItem />
+            {todos.map((todo, index) => (
+                <TodoItem key={todo.id} todo={todo} index={index + 1} />
+            ))}
         </div>
     );
 };

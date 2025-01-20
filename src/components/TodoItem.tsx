@@ -2,7 +2,19 @@ import React, {useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown, faChevronUp, faPenToSquare, faTrash} from "@fortawesome/free-solid-svg-icons";
 
-const TodoItem = () => {
+interface Todo {
+    id: string;
+    title: string;
+    description: string;
+    status: string;
+}
+
+interface TodoItemProps {
+    todo: Todo;
+    index: number;
+}
+
+const TodoItem = ({todo, index}: TodoItemProps) => {
     const [status, setStatus] = useState<string>("To Do");
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
 
@@ -27,8 +39,8 @@ const TodoItem = () => {
     return (
         <div className="todo-item">
             <div className="todo-item__main">
-                <span className="todo-item__number">1</span>
-                <div className="todo-item__title">Lorem ipsum dolor sit.
+                <span className="todo-item__number">{index}</span>
+                <div className="todo-item__title">{todo.title}
                     <FontAwesomeIcon icon={descriptionVisible ? faChevronUp : faChevronDown} size="lg" className="todo-item__toggle-description" onClick={toggleDescription} />
                 </div>
                 <div className="todo-item__status">
@@ -41,7 +53,7 @@ const TodoItem = () => {
                     <div className="todo-item__remove-button"><FontAwesomeIcon icon={faTrash} size="lg"/></div>
                 </div>
             </div>
-            <div className={`todo-item__description ${descriptionVisible? "" : "visible"}`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum obcaecati quia ut.</div>
+            <div className={`todo-item__description ${descriptionVisible? "visible" : ""}`}>{todo.description}</div>
         </div>
 
     );
