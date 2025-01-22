@@ -12,9 +12,10 @@ interface Todo {
 interface TodoItemProps {
     todo: Todo;
     index: number;
+    handleDelete: (id: string) => void;
 }
 
-const TodoItem = ({todo, index}: TodoItemProps) => {
+const TodoItem = ({todo, index, handleDelete}: TodoItemProps) => {
     const [status, setStatus] = useState<string>("To Do");
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
 
@@ -50,7 +51,7 @@ const TodoItem = ({todo, index}: TodoItemProps) => {
                     <div className="todo-item__edit-button"><FontAwesomeIcon icon={faPenToSquare} size="lg"/></div>
                 </div>
                 <div className="todo-item__remove">
-                    <div className="todo-item__remove-button"><FontAwesomeIcon icon={faTrash} size="lg"/></div>
+                    <div className="todo-item__remove-button" onClick={() => handleDelete(todo.id)}><FontAwesomeIcon icon={faTrash} size="lg"/></div>
                 </div>
             </div>
             <div className={`todo-item__description ${descriptionVisible? "visible" : ""}`}>{todo.description}</div>

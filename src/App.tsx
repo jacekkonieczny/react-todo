@@ -24,10 +24,14 @@ function App() {
         setTodos([...todos, newTodo]);
     }
 
+    const deleteTodo = (id: string) => {
+        setTodos(todos.filter((todo) => todo.id !== id));
+    }
+
   return (
     <div className="App">
       <AddTodoForm onAddTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onDeleteTodo={deleteTodo} />
     </div>
   );
 }

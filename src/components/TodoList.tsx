@@ -10,9 +10,10 @@ interface Todo {
 
 interface TodoListProps {
     todos: Todo[];
+    onDeleteTodo: (id: string) => void;
 }
 
-const TodoList = ({todos}: TodoListProps) => {
+const TodoList = ({todos, onDeleteTodo}: TodoListProps) => {
     return (
         <div className="todo-list">
             <div className="todo-list__header">
@@ -23,7 +24,7 @@ const TodoList = ({todos}: TodoListProps) => {
                 <span className="todo-list__header-item todo-list__header-item--remove">Remove</span>
             </div>
             {todos.map((todo, index) => (
-                <TodoItem key={todo.id} todo={todo} index={index + 1} />
+                <TodoItem key={todo.id} todo={todo} index={index + 1} handleDelete={onDeleteTodo} />
             ))}
         </div>
     );
