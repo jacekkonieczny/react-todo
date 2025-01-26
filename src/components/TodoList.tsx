@@ -11,9 +11,10 @@ interface Todo {
 interface TodoListProps {
     todos: Todo[];
     onDeleteTodo: (id: string) => void;
+    onEditTodo: (id: string, editedTitle: string, editedDescription: string) => void;
 }
 
-const TodoList = ({todos, onDeleteTodo}: TodoListProps) => {
+const TodoList = ({todos, onDeleteTodo, onEditTodo}: TodoListProps) => {
     return (
         <div className="todo-list">
             <div className="todo-list__header">
@@ -24,7 +25,7 @@ const TodoList = ({todos, onDeleteTodo}: TodoListProps) => {
                 <span className="todo-list__header-item todo-list__header-item--remove">Remove</span>
             </div>
             {todos.map((todo, index) => (
-                <TodoItem key={todo.id} todo={todo} index={index + 1} handleDelete={onDeleteTodo} />
+                <TodoItem key={todo.id} todo={todo} index={index + 1} handleDelete={onDeleteTodo} handleEdit={onEditTodo} />
             ))}
         </div>
     );

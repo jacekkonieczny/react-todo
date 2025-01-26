@@ -27,6 +27,21 @@
   &__title {
     flex: 0 1 50%;
     text-align: center;
+
+    &-input {
+      padding: 0.35rem;
+      background-color: $secondary-bg-color;
+      border: 0.15rem solid $primary-bg-color;
+      border-radius: 4px;
+      color: $black-color;
+      font-family: "Poppins", serif;
+      font-size: 0.9rem;
+
+      &:focus {
+        outline: none;
+        border: 0.15rem solid $blue-color;
+      }
+    }
   }
 
   &__toggle-description {
@@ -63,6 +78,20 @@
     }
   }
 
+  &__save {
+    flex: 0 1 7.5%;
+    text-align: center;
+
+    &-button {
+      cursor: pointer;
+      padding: 0.5rem;
+      background-color: $primary-bg-color;
+      color: $green-color;
+      border: 0.15rem solid $green-color;
+      border-radius: 4px;
+    }
+  }
+
   &__remove {
     flex: 0 1 7.5%;
     text-align: center;
@@ -85,6 +114,22 @@
 
     &.visible {
       display: block;
+    }
+
+    &-input {
+      padding: 0.35rem;
+      background-color: $secondary-bg-color;
+      border: 0.15rem solid $primary-bg-color;
+      border-radius: 4px;
+      color: $black-color;
+      font-family: "Poppins", serif;
+      font-size: 0.9rem;
+      resize: none;
+
+      &:focus {
+        outline: none;
+        border: 0.15rem solid $blue-color;
+      }
     }
   }
 }

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="add new todo form">
-      <change afterPath="$PROJECT_DIR$/src/components/AddTodoForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" afterDir="false" />
+    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="add functionality to delete todos and update todo item styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/TodoItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoItem.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,20 @@
       <workItem from="1734466284069" duration="2986000" />
       <workItem from="1735921716809" duration="4085000" />
       <workItem from="1736032766560" duration="3390000" />
-      <workItem from="1736172938867" duration="299000" />
+      <workItem from="1736172938867" duration="572000" />
+      <workItem from="1736358873835" duration="600000" />
+      <workItem from="1736528282020" duration="10255000" />
+      <workItem from="1736614576093" duration="3465000" />
+      <workItem from="1736854768033" duration="5236000" />
+      <workItem from="1736967779311" duration="423000" />
+      <workItem from="1737046383544" duration="843000" />
+      <workItem from="1737280423730" duration="6320000" />
+      <workItem from="1737378879984" duration="10555000" />
+      <workItem from="1737563227609" duration="3548000" />
+      <workItem from="1737712123632" duration="3986000" />
+      <workItem from="1737716405599" duration="2953000" />
+      <workItem from="1737884033680" duration="593000" />
+      <workItem from="1737884644909" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="install dependencies">
       <option name="closed" value="true" />
@@ -102,7 +117,71 @@
       <option name="project" value="LOCAL" />
       <updated>1736036160646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add new todo form">
+      <option name="closed" value="true" />
+      <created>1736173308053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736173308053</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add todo list header">
+      <option name="closed" value="true" />
+      <created>1736537054981</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736537054981</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add static todo item with placeholder content">
+      <option name="closed" value="true" />
+      <created>1736855872100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736855872100</updated>
+    </task>
+    <task id="LOCAL-00007" summary="align todo list header items consistently">
+      <option name="closed" value="true" />
+      <created>1736855973034</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736855973034</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add status change functionality for todo item">
+      <option name="closed" value="true" />
+      <created>1737046630954</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737046630954</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add collapsible description to todo item">
+      <option name="closed" value="true" />
+      <created>1737290950558</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737290950558</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add functionality to create todos via form and display them in todo list">
+      <option name="closed" value="true" />
+      <created>1737397335683</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737397335683</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add functionality to delete todos and update todo item styles">
+      <option name="closed" value="true" />
+      <created>1737565610865</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737565610875</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +192,14 @@
     <MESSAGE value="add scss and reset css" />
     <MESSAGE value="add color variables scss" />
     <MESSAGE value="add new todo form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new todo form" />
+    <MESSAGE value="add todo list header" />
+    <MESSAGE value="add static todo item with placeholder content" />
+    <MESSAGE value="align todo list header items consistently" />
+    <MESSAGE value="add status change functionality for todo item" />
+    <MESSAGE value="add collapsible description to todo item" />
+    <MESSAGE value="Add functionality to create todos via form and display them in todo list" />
+    <MESSAGE value="add functionality to create todos via form and display them in todo list" />
+    <MESSAGE value="add functionality to delete todos and update todo item styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functionality to delete todos and update todo item styles" />
   </component>
 </project>

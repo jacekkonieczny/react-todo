@@ -28,10 +28,21 @@ function App() {
         setTodos(todos.filter((todo) => todo.id !== id));
     }
 
+    const editTodo = (id: string, editedTitle: string, editedDescription: string)=> {
+        setTodos(todos.map((todo) =>
+            todo.id === id
+            ? {...todo, title: editedTitle, description: editedDescription}
+            : todo
+        ));
+    }
+
   return (
     <div className="App">
-      <AddTodoForm onAddTodo={addTodo} />
-      <TodoList todos={todos} onDeleteTodo={deleteTodo} />
+        <header className="app-header">
+            <h1>React Todo</h1>
+        </header>
+        <AddTodoForm onAddTodo={addTodo} />
+        <TodoList todos={todos} onDeleteTodo={deleteTodo} onEditTodo={editTodo} />
     </div>
   );
 }

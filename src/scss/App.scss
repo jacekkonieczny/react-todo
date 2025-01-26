@@ -53,7 +53,12 @@ table {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   background: $primary-bg-color;
   font-family: "Poppins", serif;
 }
+
+.app-header {
+  color: $black-color;
+  font-size: 4rem;
+}
+
