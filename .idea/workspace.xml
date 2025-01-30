@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="add functionality to delete todos and update todo item styles">
+    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="add todo item editing functionality and simple header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/TodoItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/TodoList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoList.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,9 @@
     &quot;accountId&quot;: &quot;1618f7f8-1ab3-469f-8bc7-45889adf33c4&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -91,7 +91,9 @@
       <workItem from="1737712123632" duration="3986000" />
       <workItem from="1737716405599" duration="2953000" />
       <workItem from="1737884033680" duration="593000" />
-      <workItem from="1737884644909" duration="2967000" />
+      <workItem from="1737884644909" duration="6479000" />
+      <workItem from="1738155414221" duration="760000" />
+      <workItem from="1738261976357" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="install dependencies">
       <option name="closed" value="true" />
@@ -181,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737565610875</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add todo item editing functionality and simple header">
+      <option name="closed" value="true" />
+      <created>1737887831513</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737887831514</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +210,7 @@
     <MESSAGE value="Add functionality to create todos via form and display them in todo list" />
     <MESSAGE value="add functionality to create todos via form and display them in todo list" />
     <MESSAGE value="add functionality to delete todos and update todo item styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="add functionality to delete todos and update todo item styles" />
+    <MESSAGE value="add todo item editing functionality and simple header" />
+    <option name="LAST_COMMIT_MESSAGE" value="add todo item editing functionality and simple header" />
   </component>
 </project>
