@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="fix todo item and todo list item sizing and change header font size">
+    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="fix mobile layout and enable editing on touch for todo item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/AddTodoForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/TodoItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/TodoList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoList.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1737884644909" duration="6479000" />
       <workItem from="1738155414221" duration="760000" />
       <workItem from="1738261976357" duration="798000" />
-      <workItem from="1739018687365" duration="4018000" />
+      <workItem from="1739018687365" duration="7001000" />
     </task>
     <task id="LOCAL-00001" summary="install dependencies">
       <option name="closed" value="true" />
@@ -201,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738262726569</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix mobile layout and enable editing on touch for todo item">
+      <option name="closed" value="true" />
+      <created>1739022783703</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739022783703</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +230,7 @@
     <MESSAGE value="add functionality to delete todos and update todo item styles" />
     <MESSAGE value="add todo item editing functionality and simple header" />
     <MESSAGE value="fix todo item and todo list item sizing and change header font size" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix todo item and todo list item sizing and change header font size" />
+    <MESSAGE value="fix mobile layout and enable editing on touch for todo item" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mobile layout and enable editing on touch for todo item" />
   </component>
 </project>

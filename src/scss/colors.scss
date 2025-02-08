@@ -16,5 +16,9 @@ $statuses: (
 @each $status, $color in $statuses {
   .#{$status} {
     color: $color;
+
+    &:active {
+      background-color: $color; color: $primary-bg-color;
+    }
   }
 }

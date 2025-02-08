@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  background-color: $primary-bg-color;
 }
 ol, ul {
   list-style: none;
@@ -58,7 +59,11 @@ table {
 }
 
 .app-header {
+  margin-top: 1rem;
+  padding: 0.5rem;
   color: $black-color;
   font-size: 3.5rem;
+  border: 0.3rem solid $black-color;
+  border-radius: 1rem;
 }
 

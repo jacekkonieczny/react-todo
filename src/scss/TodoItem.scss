@@ -36,7 +36,7 @@
       padding: 0.35rem;
       background-color: $secondary-bg-color;
       border: 0.15rem solid $primary-bg-color;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       color: $black-color;
       font-family: "Poppins", serif;
       font-size: 0.9rem;
@@ -63,10 +63,12 @@
       padding: 0.5rem;
       background-color: $primary-bg-color;
       border: 0.15rem solid;
-      border-radius: 4px;
-
+      border-radius: 0.25rem;
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
   }
+
+
 
   &__edit {
     flex: 0 1 7.5%;
@@ -82,7 +84,12 @@
       background-color: $primary-bg-color;
       color: $blue-color;
       border: 0.15rem solid $blue-color;
-      border-radius: 4px;
+      border-radius: 0.25rem;
+      transition: background-color 0.4s ease, color 0.4s ease;
+
+      &:active {
+        background-color: $blue-color; color: $primary-bg-color;
+      }
     }
   }
 
@@ -96,7 +103,12 @@
       background-color: $primary-bg-color;
       color: $green-color;
       border: 0.15rem solid $green-color;
-      border-radius: 4px;
+      border-radius: 0.25rem;
+      transition: background-color 0.4s ease, color 0.4s ease;
+
+      &:active {
+        background-color: $green-color; color: $primary-bg-color;
+      }
     }
   }
 
@@ -114,7 +126,12 @@
       background-color: $primary-bg-color;
       color: $red-color;
       border: 0.15rem solid $red-color;
-      border-radius: 4px;
+      border-radius: 0.25rem;
+      transition: background-color 0.4s ease, color 0.4s ease;
+
+      &:active {
+        background-color: $red-color; color: $primary-bg-color;
+      }
     }
   }
 
@@ -132,7 +149,7 @@
       padding: 0.35rem;
       background-color: $secondary-bg-color;
       border: 0.15rem solid $primary-bg-color;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       color: $black-color;
       font-family: "Poppins", serif;
       font-size: 0.9rem;
