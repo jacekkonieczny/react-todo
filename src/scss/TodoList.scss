@@ -29,9 +29,19 @@
         flex: 0 1 30%;
       }
 
-      &--edit,
+      &--edit {
+        flex: 0 1 7.5%;
+
+        @media (max-width: 768px) {
+          display: none
+        }
+      }
       &--remove {
         flex: 0 1 7.5%;
+
+        @media (max-width: 768px) {
+          flex: 0 1 15%;
+        }
       }
     }
   }

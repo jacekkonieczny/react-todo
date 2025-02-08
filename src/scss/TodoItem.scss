@@ -72,6 +72,10 @@
     flex: 0 1 7.5%;
     text-align: center;
 
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     &-button {
       cursor: pointer;
       padding: 0.5rem;
@@ -99,6 +103,10 @@
   &__remove {
     flex: 0 1 7.5%;
     text-align: center;
+
+    @media (max-width: 768px) {
+      flex: 0 1 15%;
+    }
 
     &-button {
       cursor: pointer;

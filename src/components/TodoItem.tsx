@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSave, faChevronDown, faChevronUp, faPenToSquare, faTrash} from "@fortawesome/free-solid-svg-icons";
 
@@ -22,6 +22,8 @@ const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [editTitle, setEditTitle] = useState<string>(todo.title);
     const [editDescription, setEditDescription] = useState<string>(todo.description);
+    const [touchTimer, setTouchTimer] = useState<NodeJS.Timeout>();
+    const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
     const handleStatusChange = () => {
         let nextStatus: string = "To Do";
@@ -46,13 +48,39 @@ const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
         setIsEditing(false);
     }
 
+    const handleTouchStart = () => {
+        const timer = setTimeout(() => {
+            setIsEditing(true);
+        }, 500)
+        setTouchTimer(timer);
+    }
+    const handleTouchEnd = () => {
+        if (touchTimer) {
+            clearTimeout(touchTimer);
+        }
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+
+            if (e.target === descriptionRef.current) {
+                handleSave()
+            } else {
+                if (descriptionRef.current) {
+                    descriptionRef.current.focus();
+                }
+            }
+        }
+    }
+
     return (
-        <div className="todo-item">
+        <div className="todo-item" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             <div className="todo-item__main">
                 <span className="todo-item__number">{index}</span>
                 <div className="todo-item__title">
                     {isEditing ? (
-                        <input className="todo-item__title-input" type="text" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
+                        <input className="todo-item__title-input" type="text" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} onKeyDown={handleKeyDown} />
                     ) : (
                         <>
                             {todo.title}
@@ -74,7 +102,7 @@ const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
                 </div>
             </div>
             {isEditing ? (
-                <textarea className="todo-item__description-input" value={editDescription} onChange={(e) => setEditDescription(e.target.value)} rows={2} />
+                <textarea className="todo-item__description-input" value={editDescription} onChange={(e) => setEditDescription(e.target.value)} rows={2} onKeyDown={handleKeyDown} ref={descriptionRef} />
             ) : (
                 <div className={`todo-item__description ${descriptionVisible ? "visible" : ""}`}>{todo.description}</div>
             )}

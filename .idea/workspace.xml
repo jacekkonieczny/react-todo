@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="add todo item editing functionality and simple header">
+    <list default="true" id="af9d10e5-3559-4bd0-b96d-6d21532dbf6f" name="Changes" comment="fix todo item and todo list item sizing and change header font size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/TodoItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoItem.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/TodoList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/TodoList.scss" afterDir="false" />
     </list>
@@ -93,7 +94,8 @@
       <workItem from="1737884033680" duration="593000" />
       <workItem from="1737884644909" duration="6479000" />
       <workItem from="1738155414221" duration="760000" />
-      <workItem from="1738261976357" duration="678000" />
+      <workItem from="1738261976357" duration="798000" />
+      <workItem from="1739018687365" duration="4018000" />
     </task>
     <task id="LOCAL-00001" summary="install dependencies">
       <option name="closed" value="true" />
@@ -191,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737887831514</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix todo item and todo list item sizing and change header font size">
+      <option name="closed" value="true" />
+      <created>1738262726569</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738262726569</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +221,7 @@
     <MESSAGE value="add functionality to create todos via form and display them in todo list" />
     <MESSAGE value="add functionality to delete todos and update todo item styles" />
     <MESSAGE value="add todo item editing functionality and simple header" />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo item editing functionality and simple header" />
+    <MESSAGE value="fix todo item and todo list item sizing and change header font size" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix todo item and todo list item sizing and change header font size" />
   </component>
 </project>
