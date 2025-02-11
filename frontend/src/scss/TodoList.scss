@@ -1,0 +1,48 @@
+.todo-list {
+  width: 80%;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
+  &__header {
+    display: flex;
+    padding: 0 0.25rem 0.5rem 0.25rem;
+    border-bottom: 0.15rem solid $black-color;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $black-color;
+      font-size: 1rem;
+      min-width: 0;
+
+      &--number {
+        flex: 0 1 5%;
+      }
+
+      &--title {
+        flex: 0 1 50%;
+      }
+
+      &--status {
+        flex: 0 1 30%;
+      }
+
+      &--edit {
+        flex: 0 1 7.5%;
+
+        @media (max-width: 768px) {
+          display: none
+        }
+      }
+      &--remove {
+        flex: 0 1 7.5%;
+
+        @media (max-width: 768px) {
+          flex: 0 1 15%;
+        }
+      }
+    }
+  }
+}
