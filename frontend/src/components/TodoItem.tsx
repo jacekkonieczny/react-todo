@@ -13,11 +13,11 @@ interface TodoItemProps {
     todo: Todo;
     index: number;
     handleDelete: (id: string) => void;
-    handleEdit: (id: string, editedTitle: string, editedDescription: string) => void;
+    handleEdit: (id: string, editedTitle: string, editedDescription: string, status: string) => void;
 }
 
 const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
-    const [status, setStatus] = useState<string>("To Do");
+    const [status, setStatus] = useState<string>(todo.status);
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [editTitle, setEditTitle] = useState<string>(todo.title);
@@ -37,6 +37,7 @@ const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
         }
 
         setStatus(nextStatus);
+        handleEdit(todo.id, editTitle, editDescription, nextStatus)
     }
 
     const toggleDescription = () => {
@@ -44,7 +45,7 @@ const TodoItem = ({todo, index, handleDelete, handleEdit}: TodoItemProps) => {
     }
 
     const handleSave = () => {
-        handleEdit(todo.id, editTitle, editDescription);
+        handleEdit(todo.id, editTitle, editDescription, status);
         setIsEditing(false);
     }
 

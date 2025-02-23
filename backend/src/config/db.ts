@@ -8,14 +8,14 @@ const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
-})
+});
 
 db.connect((err) => {
     if (err) {
-        console.error("blad polaczenia z baza danych", err);
+        console.error("database connection error", err);
     } else {
-        console.log("polaczono z baza danych");
+        console.log("connected to the database");
     }
-})
+});
 
 export default db;

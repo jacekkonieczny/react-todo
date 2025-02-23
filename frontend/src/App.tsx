@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './scss/App.scss'
 import AddTodoForm from "./components/AddTodoForm";
 import TodoList from "./components/TodoList";
@@ -14,26 +14,61 @@ interface Todo {
 function App() {
     const [todos, setTodos] = useState<Todo[]>([]);
 
+    useEffect(() => {
+        fetch("http://localhost:6969/api/todos")
+            .then((res) => res.json())
+            .then((data) => setTodos(data))
+            .catch((err) => console.error("error fetching data", err));
+    }, []);
+
     const addTodo = (title: string, description: string) => {
         const newTodo: Todo = {
             id: uuidv4(),
             title,
             description,
-            status: "To do"
+            status: "To Do",
         }
-        setTodos([...todos, newTodo]);
+
+        fetch("http://localhost:6969/api/todos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newTodo)
+        })
+            .then((res) => res.json())
+            .then((data) => setTodos([...todos, data]))
+            .catch((err) => console.error("error adding todo", err));
     }
 
     const deleteTodo = (id: string) => {
-        setTodos(todos.filter((todo) => todo.id !== id));
+        fetch(`http://localhost:6969/api/todos/${id}`,{
+            method: "DELETE"
+        })
+            .then(() => {
+                setTodos(todos.filter((todo) => todo.id !== id));
+            })
+            .catch((err) => console.error("error deleting todo", err));
     }
 
-    const editTodo = (id: string, editedTitle: string, editedDescription: string)=> {
-        setTodos(todos.map((todo) =>
-            todo.id === id
-            ? {...todo, title: editedTitle, description: editedDescription}
-            : todo
-        ));
+    const editTodo = (id: string, editedTitle: string, editedDescription: string, status: string)=> {
+        const updatedTodo = {title: editedTitle, description: editedDescription, status: status};
+
+        fetch(`http://localhost:6969/api/todos/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedTodo)
+        })
+            .then(() => {
+                setTodos(todos.map((todo) =>
+                    todo.id === id
+                        ? {...todo, title: editedTitle, description: editedDescription, status}
+                        : todo
+                ));
+            })
+            .catch((err) => console.error("error editing todo", err));
     }
 
   return (

@@ -11,7 +11,7 @@ interface Todo {
 interface TodoListProps {
     todos: Todo[];
     onDeleteTodo: (id: string) => void;
-    onEditTodo: (id: string, editedTitle: string, editedDescription: string) => void;
+    onEditTodo: (id: string, editedTitle: string, editedDescription: string, status: string) => void;
 }
 
 const TodoList = ({todos, onDeleteTodo, onEditTodo}: TodoListProps) => {
